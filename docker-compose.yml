@@ -1,0 +1,29 @@
+services:
+  person_api:
+    build:
+      context: ./person_api
+      dockerfile: Dockerfile
+    #image: nodejs
+    container_name: person_api
+    restart: unless-stopped
+    ports:
+      - "80:8080"
+  
+  shop_api:
+    build:
+      context: ./shop_api
+      dockerfile: Dockerfile
+    #image: nodejs
+    container_name: shop_api
+    restart: unless-stopped
+    ports:
+      - "81:8080"
+  payment_api:
+    build:
+      context: ./payment_api
+      dockerfile: Dockerfile
+    #image: nodejs
+    container_name: payment_api
+    restart: unless-stopped
+    ports:
+      - "82:8080"
