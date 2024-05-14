@@ -13,7 +13,7 @@ const peopleSchema = new mongoose.Schema({
         required: true
     },
     address: {
-      type: Date,
+      type: String,
       required: true
     },
     createdAt: {
