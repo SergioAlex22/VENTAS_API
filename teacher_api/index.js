@@ -24,7 +24,7 @@ app.post('/teacher', async(req, res)=>{
     const lastname = req.body.lastname;
     const status = req.body.status;
 
-    const teacher = new teacherModel({ codeTea4,name,lastname,status});
+    const teacher = new teacherModel({ codeTeacher,name,lastname,status});
 
     const data = await teacher.save();
     return res.status(201).json(data);
