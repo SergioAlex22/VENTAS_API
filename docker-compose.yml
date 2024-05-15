@@ -9,12 +9,12 @@ services:
     ports:
       - "80:8080"
   
-  course_api:
+  courses_api:
     build:
-      context: ./course_api
+      context: ./courses_api
       dockerfile: Dockerfile
     #image: nodejs
-    container_name: course_api
+    container_name: courses_api
     restart: unless-stopped
     ports:
       - "81:8080"
