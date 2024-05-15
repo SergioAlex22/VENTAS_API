@@ -9,21 +9,22 @@ services:
     ports:
       - "80:8080"
   
-  shop_api:
+  course_api:
     build:
-      context: ./shop_api
+      context: ./course_api
       dockerfile: Dockerfile
     #image: nodejs
-    container_name: shop_api
+    container_name: course_api
     restart: unless-stopped
     ports:
       - "81:8080"
-  payment_api:
+
+  teacher_api:
     build:
-      context: ./payment_api
+      context: ./teacher_api
       dockerfile: Dockerfile
     #image: nodejs
-    container_name: payment_api
+    container_name: teacher_api
     restart: unless-stopped
     ports:
       - "82:8080"
