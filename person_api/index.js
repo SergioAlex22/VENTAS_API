@@ -13,18 +13,18 @@ app.get('/people', async(req, res)=>{
   const people = await peopleModel.find({});
   res.json( people );
 });
-app.get('/people/:dni', async(req, res)=>{
-  const person = await peopleModel.find({dni:req.params.dni});
+app.get('/people/:codeStudent', async(req, res)=>{
+  const person = await peopleModel.find({codeStudent:req.params.codeStudent});
   res.json( person );
 });
 app.post('/people', async(req, res)=>{
   try {
-    const dni = req.body.dni;
+    const codeStudent = req.body.codeStudent;
     const name = req.body.name;
     const lastname = req.body.lastname;
     const address = req.body.address;
 
-    const person = new peopleModel({ dni,name,lastname, address});
+    const person = new peopleModel({ codeStudent,name,lastname, address});
 
     const data = await person.save();
     return res.status(201).json(data);

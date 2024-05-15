@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const courseSchema = new mongoose.Schema({
-    dni: {
+    code: {
         type: String,
         required: true
       },
@@ -8,13 +8,9 @@ const courseSchema = new mongoose.Schema({
       type: String,
       required: true
     },
-    lastname: {
+    tpeCourse: {
         type: String,
         required: true
-    },
-    address: {
-      type: String,
-      required: true
     },
     createdAt: {
       type: Date,

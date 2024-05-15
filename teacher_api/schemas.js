@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const teacherSchema = new mongoose.Schema({
-    dni: {
+    codeTeacher: {
         type: String,
         required: true
       },
@@ -12,7 +12,7 @@ const teacherSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    address: {
+    status: {
       type: String,
       required: true
     },

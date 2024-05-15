@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const peopleSchema = new mongoose.Schema({
-    dni: {
+    codeStudent: {
         type: String,
         required: true
       },
